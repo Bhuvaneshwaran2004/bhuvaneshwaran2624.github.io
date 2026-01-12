@@ -5,53 +5,55 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bhuvaneshwaran A | Software Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --primary:#6366f1;
-  --accent:#38bdf8;
-  --dark:#0f172a;
-  --bg:#f8fafc;
-  --card:#ffffff;
-  --text:#334155;
+  --bg:#0b1120;
+  --card:#111827;
+  --primary:#38bdf8;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --border:#1f2937;
 }
 
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
+  font-family:'Inter',sans-serif;
 }
 
 body{
   background:var(--bg);
   color:var(--text);
-  line-height:1.6;
+  line-height:1.7;
 }
 
-/* ===== NAVBAR ===== */
+/* NAV */
 nav{
-  position:sticky;
+  position:fixed;
   top:0;
-  background:rgba(255,255,255,0.9);
-  backdrop-filter:blur(10px);
+  width:100%;
+  background:rgba(11,17,32,0.8);
+  backdrop-filter:blur(12px);
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:1rem 2rem;
   z-index:1000;
-  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+  border-bottom:1px solid var(--border);
 }
 
 nav h3{
   color:var(--primary);
+  font-weight:700;
 }
 
 nav a{
   margin-left:20px;
+  color:var(--muted);
   text-decoration:none;
-  color:var(--dark);
   font-weight:500;
 }
 
@@ -59,128 +61,138 @@ nav a:hover{
   color:var(--primary);
 }
 
-/* ===== HERO ===== */
+/* HERO */
 header{
-  min-height:90vh;
+  min-height:100vh;
   display:flex;
   align-items:center;
   justify-content:center;
-  text-align:center;
-  padding:2rem;
-  background:linear-gradient(135deg,var(--primary),var(--accent));
-  color:white;
+  padding:6rem 2rem;
 }
 
-header h1{
-  font-size:3.2rem;
+.hero{
+  max-width:900px;
 }
 
-header p{
-  font-size:1.2rem;
-  margin:1rem 0 2rem;
+.hero span{
+  color:var(--primary);
+  font-weight:600;
+  letter-spacing:1px;
 }
 
-.hero-btns a{
-  text-decoration:none;
-  margin:0 10px;
+.hero h1{
+  font-size:3.5rem;
+  margin:1rem 0;
+}
+
+.hero p{
+  color:var(--muted);
+  max-width:600px;
+  margin-bottom:2rem;
+}
+
+.hero a{
+  display:inline-block;
+  margin-right:15px;
   padding:12px 26px;
-  border-radius:30px;
-  font-weight:500;
-  transition:0.3s;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
 }
 
 .btn-primary{
-  background:white;
-  color:var(--primary);
+  background:var(--primary);
+  color:#000;
 }
 
 .btn-outline{
-  border:2px solid white;
-  color:white;
+  border:1px solid var(--border);
+  color:var(--text);
 }
 
-.hero-btns a:hover{
-  transform:translateY(-3px);
+.hero a:hover{
+  transform:translateY(-4px);
 }
 
-/* ===== SECTIONS ===== */
+/* SECTIONS */
 section{
   max-width:1100px;
   margin:auto;
-  padding:4rem 1.5rem;
+  padding:5rem 2rem;
 }
 
 section h2{
-  text-align:center;
-  font-size:2.2rem;
-  margin-bottom:3rem;
-  color:var(--dark);
+  font-size:2rem;
+  margin-bottom:2.5rem;
+  position:relative;
 }
 
-/* ===== CARDS ===== */
+section h2::after{
+  content:"";
+  width:50px;
+  height:3px;
+  background:var(--primary);
+  position:absolute;
+  left:0;
+  bottom:-10px;
+}
+
+/* CARDS */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
+  gap:24px;
 }
 
 .card{
   background:var(--card);
   padding:1.8rem;
-  border-radius:16px;
-  box-shadow:0 15px 30px rgba(0,0,0,0.08);
-  transition:0.3s;
+  border-radius:14px;
+  border:1px solid var(--border);
+  transition:.3s;
 }
 
 .card:hover{
-  transform:translateY(-8px);
+  transform:translateY(-6px);
+  border-color:var(--primary);
 }
 
-/* ===== SKILLS ===== */
+/* SKILLS */
 .skills{
   display:flex;
   flex-wrap:wrap;
-  justify-content:center;
-  gap:14px;
+  gap:12px;
 }
 
 .skills span{
-  background:#eef2ff;
-  color:var(--primary);
   padding:10px 18px;
-  border-radius:25px;
+  border-radius:30px;
+  background:#020617;
+  border:1px solid var(--border);
+  color:var(--primary);
   font-weight:500;
 }
 
-/* ===== PROJECT ===== */
+/* PROJECT */
 .project-title{
-  font-size:1.4rem;
+  font-size:1.3rem;
   color:var(--primary);
   margin-bottom:10px;
 }
 
-ul{
-  padding-left:1.2rem;
-  margin-top:10px;
-}
-
-ul li{
-  margin-bottom:8px;
-}
-
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer{
-  background:var(--dark);
-  color:white;
   text-align:center;
-  padding:2rem;
-  font-size:0.9rem;
+  padding:3rem 1rem;
+  border-top:1px solid var(--border);
+  color:var(--muted);
 }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
 @media(max-width:600px){
-  header h1{
-    font-size:2.4rem;
+  .hero h1{
+    font-size:2.6rem;
   }
 }
 </style>
@@ -188,7 +200,6 @@ footer{
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
   <h3>Bhuvaneshwaran</h3>
   <div>
@@ -199,29 +210,28 @@ footer{
   </div>
 </nav>
 
-<!-- HERO -->
 <header>
-  <div>
+  <div class="hero">
+    <span>SOFTWARE ENGINEER</span>
     <h1>Bhuvaneshwaran A</h1>
-    <p>Aspiring Software Engineer | Full Stack Enthusiast</p>
-    <div class="hero-btns">
-      <a class="btn-primary" href="https://github.com/Bhuvaneshwaran2004" target="_blank">GitHub</a>
-      <a class="btn-outline" href="https://linkedin.com/in/Bhuvaneshwaran" target="_blank">LinkedIn</a>
-    </div>
+    <p>
+      Aspiring Full Stack Developer passionate about building scalable,
+      secure, and user-centric web applications.
+    </p>
+    <a href="https://github.com/Bhuvaneshwaran2004" target="_blank" class="btn-primary">GitHub</a>
+    <a href="https://linkedin.com/in/Bhuvaneshwaran" target="_blank" class="btn-outline">LinkedIn</a>
   </div>
 </header>
 
-<!-- ABOUT -->
 <section id="about">
-  <h2>About Me</h2>
+  <h2>About</h2>
   <div class="card">
-    Passionate software engineer with strong fundamentals in web development,
-    databases, and cloud concepts. Seeking challenging opportunities to build
-    scalable and impactful applications.
+    I am a Computer Science Engineering student with strong foundations in
+    web development, databases, and cloud computing. I enjoy turning complex
+    problems into simple, elegant solutions.
   </div>
 </section>
 
-<!-- EDUCATION -->
 <section>
   <h2>Education</h2>
   <div class="grid">
@@ -240,16 +250,15 @@ footer{
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
-  <h2>Technical Skills</h2>
+  <h2>Skills</h2>
   <div class="skills">
     <span>Java</span>
     <span>SQL</span>
     <span>HTML</span>
     <span>CSS</span>
     <span>JavaScript</span>
-    <span>ReactJS</span>
+    <span>React</span>
     <span>Node.js</span>
     <span>Supabase</span>
     <span>Cloud Computing</span>
@@ -257,23 +266,21 @@ footer{
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
   <div class="grid">
     <div class="card">
       <div class="project-title">Connect Hire</div>
-      Role-based job portal built with ReactJS & Node.js.
+      Role-based job portal built using React & Node.js.
       <ul>
-        <li>OTP Authentication</li>
-        <li>Role-based access</li>
-        <li>SPA architecture</li>
+        <li>OTP authentication</li>
+        <li>Role-based access control</li>
+        <li>Single-page architecture</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- INTERNSHIPS -->
 <section>
   <h2>Internships</h2>
   <div class="grid">
@@ -281,8 +288,8 @@ footer{
       <strong>Codebind Technologies</strong><br>
       Web Development Intern – June 2024
       <ul>
-        <li>Responsive UI development</li>
-        <li>E-commerce flows</li>
+        <li>Responsive UI design</li>
+        <li>E-commerce workflows</li>
       </ul>
     </div>
 
@@ -291,13 +298,12 @@ footer{
       Web Development Intern – Oct 2025
       <ul>
         <li>Healthcare dashboards</li>
-        <li>OTP login implementation</li>
+        <li>OTP-based login systems</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
 <section>
   <h2>Certifications</h2>
   <div class="card">
@@ -308,19 +314,19 @@ footer{
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
-  <div class="card" style="text-align:center">
+  <div class="card">
     📧 bhuvaneshwarana2004@gmail.com<br>
-    🌐 Chennai, India
+    📍 Chennai, India
   </div>
 </section>
 
 <footer>
-  © 2026 Bhuvaneshwaran A | Built with ❤️
+  © 2026 Bhuvaneshwaran A · 
 </footer>
 
 </body>
 </html>
+
 
